@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Receptivo em Santos</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Explore a história e beleza de Santos com nossos guias especializados.">
+<meta name="keywords" content="Santos, turismo, guias, roteiros, cultura, história">
+</head>
+<body>
+<header class="container-branco">
+<img src="logo.jpg" alt="Logo do Site" width="50" height="50">
+<div>
+<h1>Guia Receptivo em Santos</h1>
+<p>Explore a história e beleza de Santos com nossos guias especializados.</p>
+</div>
+</header>
+<nav id="menu">
+<a href="#roteiros">Roteiros</a>
+<a href="#guias">Guias</a>
+<a href="#quem-somos">Quem Somos</a>
+<a href="#fale-conosco">Fale Conosco</a>
+</nav>
+<main>
+<section id="roteiros" class="section container-branco">
+<h2>Roteiros</h2>
+<div class="passeio-container">
+<div class="passeio">
+<h3>Roteiro Histórico</h3>
+<p>Explore os principais pontos históricos de Santos, incluindo o Museu do Café e a Bolsa Oficial de Café.</p>
+<p><strong>Preço:</strong> R$ 50,00</p>
+<button onclick="comprarPasseio('Roteiro Histórico')">Comprar</button>
+</div>
+<div class="passeio">
+<h3>Roteiro Cultural</h3>
+<p>Descubra a rica cultura de Santos com visitas ao Teatro Coliseu, Pinacoteca Benedicto Calixto e muito mais.</p>
+<p><strong>Preço:</strong> R$ 60,00</p>
+<button onclick="comprarPasseio('Roteiro Cultural')">Comprar</button>
+</div>
+<div class="passeio">
+<h3>Roteiro Natural</h3>
+<p>Aproveite a natureza com passeios pelo Orquidário Municipal, Jardim Botânico e praias de Santos.</p>
+<p><strong>Preço:</strong> R$ 70,00</p>
+<button onclick="comprarPasseio('Roteiro Natural')">Comprar</button>
+</div>
+</div>
+</section>
+<section id="guias" class="section container-branco">
+<h2>Guias</h2>
+<div class="guia-container">
+<div class="guia">
+<img src="guia1.jpg" alt="Dexter">
+<h3>Dexter</h3>
+<p>Guia de turismo regional SP<br>
+Guia de excursão.<br>
+Gestor de turismo<br>
+Elaboração de Roteiros<br>
+Especialização em Atrativos Naturais<br>
+Cadastur: 25.443097.32-8<br>
+<img src="insta.jpg" style="width: 25px; height: 25px;">
+<a href="https://www.instagram.com/dexter.paz">@dexter.paz</a></p>
+</div>
+<div class="guia">
+<img src="guia2.jpg" alt="Monica">
+<h3>Monica</h3>
+<p>Guia de turismo regional SP<br>
+Guia de excursão<br>
+Excursão Nacional -Brasil<br>
+América do Sul , Guia Regional SP<br>
+Atendimento de excelência - Accor Hotels<br>
+Cadastur: 25.554643.85-6<br>
+<img src="insta.jpg" style="width: 25px; height: 25px;">
+<a href="https://www.instagram.com/moni_catss">@moni_catss</a></p>
+</div>
+<div class="guia">
+<img src="guia3.jpg" alt="Juliana">
+<h3>Juliana</h3>
+<p>Guia de turismo regional SP<br>
+Guia de excursão.<br>
+xxx<br>
+xxx<br>
+Cadastur:
+Cadastur: 25.554643.85-6<br>
+<img src="insta.jpg" style="width: 25px; height: 25px;">
+<a href="https://www.instagram.com/moni_catss">@moni_catss</a></p>
+</div>
+<div class="guia">
+<img src="guia3.jpg" alt="Juliana">
+<h3>Juliana</h3>
+<p>Guia de turismo regional SP<br>
+Guia de excursão.<br>
+Especialização em Turismo Histórico<br>
+Cadastur: 25.667890.12-3<br>
+<img src="insta.jpg" style="width: 25px; height: 25px;">
+<a href="https://www.instagram.com/juliana_turismo">@juliana_turismo</a></p>
+</div>
+</div>
+</section>
+<section id="quem-somos" class="section container-branco">
+<h2>Quem Somos</h2>
+<p>Somos uma equipe de guias turísticos apaixonados por Santos e dedicados a proporcionar a melhor experiência para nossos visitantes. Com anos de experiência e profundo conhecimento da região, estamos prontos para mostrar o melhor que Santos tem a oferecer.</p>
+</section>
+<section id="fale-conosco" class="section container-branco">
+<h2>Fale Conosco</h2>
+<div class="contato-container">
+<div class="contato-info">
+<h3>Informações de Contato</h3>
+<p>Email: <a href="mailto:guiadexter.sts@gmail.com">guiadexter.sts@gmail.com</a></p>
+<p>Telefone: (13) 99613-1975</p>
+</div>
+<div class="contato-form">
+<h3>Envie uma Mensagem</h3>
+<form>
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="mensagem">Mensagem:</label>
+<textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="container-branco">
+<section id="contact">
+<h2>Contato</h2>
+<p>Email: <a href="mailto:guiadexter.sts@gmail.com">guiadexter.sts@gmail.com</a></p>
+<p>Telefone: (13) 99613-1975</p>
+</section>
+</footer>
+<script>
+// Função para mostrar a seção correspondente ao menu clicado
+function showSection(sectionId) {
+var sections = document.getElementsByClassName('section');
+for (var i = 0; i < sections.length; i++) {
+sections[i].classList.remove('active');
+}
+document.getElementById(sectionId).classList.add('active');
+}
+
+// Adiciona event listeners aos links do menu
+document.querySelectorAll('#menu a').forEach(link => {
+link.addEventListener('click', function(event) {
+event.preventDefault();
+showSection(this.getAttribute('href').substring(1));
+});
+});
+
+// Função para comprar passeio
+function comprarPasseio(nomePasseio) {
+alert('Você selecionou o ' + nomePasseio + '. Redirecionando para a página de pagamento...');
+// Aqui você pode adicionar a lógica para redirecionar para a página de pagamento
+}
+</script>
+</body>
+</html>

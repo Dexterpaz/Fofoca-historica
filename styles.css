@@ -1,0 +1,143 @@
+/* Estilos básicos para o menu */
+#menu {
+display: flex;
+justify-content: space-around;
+background-color: rgba(76, 175, 80, 0.8); /* Cor de fundo verde com transparência */
+padding: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+border-radius: 8px; /* Bordas arredondadas */
+}
+#menu a {
+color: white;
+text-decoration: none;
+padding: 10px 20px;
+font-weight: bold;
+transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+#menu a:hover {
+background-color: #45a049; /* Cor de fundo ao passar o mouse */
+transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+.section {
+display: none;
+}
+.active {
+display: block;
+}
+.guia-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.guia {
+flex: 1 1 200px;
+margin: 10px;
+text-align: center;
+}
+.guia img {
+width: 150px; /* Largura fixa */
+height: 150px; /* Altura fixa */
+border-radius: 50%;
+object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
+}
+header {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+header img {
+margin-right: 20px;
+}
+.passeio-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 20px;
+}
+.passeio {
+flex: 1 1 300px;
+margin: 10px;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
+}
+.passeio h3 {
+margin-top: 0;
+}
+.passeio button {
+margin-top: 10px;
+padding: 10px 20px;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.passeio button:hover {
+background-color: #575757;
+}
+.contato-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 20px;
+}
+.contato-info, .contato-form {
+flex: 1 1 300px;
+margin: 10px;
+background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente */
+padding: 20px;
+border-radius: 10px;
+}
+.contato-form form {
+display: flex;
+flex-direction: column;
+}
+.contato-form label {
+margin-top: 10px;
+}
+.contato-form input, .contato-form textarea {
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+.contato-form button {
+margin-top: 20px;
+padding: 10px;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.contato-form button:hover {
+background-color: #575757;
+}
+
+/* Estilo para o fundo */
+body {
+background-image: url('fundo.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color: #4CAF50; /* Texto verde igual ao menu */
+font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
+font-size: 18px; /* Tamanho da fonte aumentado */
+}
+
+/* Contorno nas letras */
+h1, h2, h3, p, a {
+text-shadow: 2px 2px 4px #fff; /* Contorno branco nas letras */
+}
+
+/* Container branco para todos os textos */
+.container-branco {
+background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+padding: 20px;
+border-radius: 10px;
+margin: 10px 0;
+font-size: 18px; /* Tamanho da fonte aumentado */
+}

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.pagamento-container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+}
+.pagamento-container h2 {
+text-align: center;
+}
+.pagamento-container form {
+display: flex;
+flex-direction: column;
+}
+.pagamento-container label {
+margin-top: 10px;
+}
+.pagamento-container input, .pagamento-container select {
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+.pagamento-container button {
+margin-top: 20px;
+padding: 10px;
+background-color: #333;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.pagamento-container button:hover {
+background-color: #575757;
+}
+</style>
+</head>
+<body>
+<div class="pagamento-container">
+<h2>Pagamento</h2>
+<form id="pagamento-form" action="processar-pagamento.php" method="post">
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="metodo-pagamento">Método de Pagamento:</label>
+<select id="metodo-pagamento" name="metodo-pagamento" required onchange="mostrarCamposPagamento()">
+<option value="">Selecione</option>
+<option value="cartao">Cartão de Crédito</option>
+<option value="pix">Pix</option>
+</select>
+
+<div id="cartao-campos" style="display: none;">
+<label for="numero-cartao">Número do Cartão:</label>
+<input type="text" id="numero-cartao" name="numero-cartao">
+
+<label for="validade-cartao">Validade (MM/AA):</label>
+<input type="text" id="validade-cartao" name="validade-cartao">
+
+<label for="cvv-cartao">CVV:</label>
+<input type="text" id="cvv-cartao" name="cvv-cartao">
+</div>
+
+<div id="pix-campos" style="display: none;">
+<p>Para pagar com Pix, use o QR Code abaixo:</p>
+<img src="qrcode-pix.png" alt="QR Code Pix" style="width: 200px; height: 200px;">
+</div>
+
+<button type="submit">Pagar</button>
+</form>
+</div>
+
+<script>
+function mostrarCamposPagamento() {
+var metodoPagamento = document.getElementById('metodo-pagamento').value;
+var cartaoCampos = document.getElementById('cartao-campos');
+var pixCampos = document.getElementById('pix-campos');
+
+if (metodoPagamento === 'cartao') {
+cartaoCampos.style.display = 'block';
+pixCampos.style.display = 'none';
+} else if (metodoPagamento === 'pix') {
+cartaoCampos.style.display = 'none';
+pixCampos.style.display = 'block';
+} else {
+cartaoCampos.style.display = 'none';
+pixCampos.style.display = 'none';
+}
+}
+</script>
+</body>
+</html>
+
+PHP para Processar o Pagamento
+Crie um arquivo chamado processar-pagamento.php para processar os dados do formulário:
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$metodoPagamento = $_POST['metodo-pagamento'];
+
+if ($metodoPagamento == 'cartao') {
+$numeroCartao = $_POST['numero-cartao'];
+$validadeCartao = $_POST['validade-cartao'];
+$cvvCartao = $_POST['cvv-cartao'];
+
+// Aqui você pode adicionar a lógica para processar o pagamento com cartão de crédito
+// Por exemplo, integrar com uma API de pagamento
+
+echo "Pagamento com cartão de crédito processado com sucesso!";
+} elseif ($metodoPagamento == 'pix') {
+// Aqui você pode adicionar a lógica para processar o pagamento via Pix
+// Por exemplo, verificar a confirmação do pagamento
+
+echo "Pagamento via Pix processado com sucesso!";
+} else {
+echo "Método de pagamento inválido.";
+}
+}
+?>

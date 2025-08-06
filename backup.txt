@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Receptivo em Santos</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Estilos básicos para o menu */
+#menu {
+display: flex;
+justify-content: space-around;
+background-color: #333;
+padding: 10px;
+}
+#menu a {
+color: white;
+text-decoration: none;
+padding: 10px 20px;
+}
+#menu a:hover {
+background-color: #575757;
+}
+.section {
+display: none;
+}
+.active {
+display: block;
+}
+.guia-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.guia {
+flex: 1 1 200px;
+margin: 10px;
+text-align: center;
+}
+.guia img {
+width: 150px; /* Largura fixa */
+height: 150px; /* Altura fixa */
+border-radius: 50%;
+object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
+}
+header {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+header img {
+margin-right: 20px;
+}
+</style>
+</head>

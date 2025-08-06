@@ -1,0 +1,37 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+color: #333;
+}
+
+header {
+background-color: #0C5678; /* Azul petróleo */
+color: #fff;
+padding: 8px;
+text-align: center;
+}
+
+main {
+padding: 20px;
+}
+
+section {
+margin-bottom: 20px;
+}
+
+footer {
+background-color: #0C5678; /* Azul petróleo */
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+
+footer p {
+background-color: #fff; /* Fundo branco para o texto */
+color: #013a65; /* Cor do texto para contraste */
+padding: 5px; /* Espaçamento interno */
+display: inline-block; /* Para que o fundo se ajuste ao tamanho do texto */
+border-radius: 5px; /* Bordas arredondadas, opcional */
+}
