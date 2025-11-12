@@ -21,7 +21,7 @@
 <a href="#guias">Guias</a>
 <a href="#quem-somos">Quem Somos</a>
 <a href="#fale-conosco">Fale Conosco</a>
-</nav>
+<a href="#english-info">English Info</a> </nav>
 <main>
 <section id="roteiros" class="section container-branco">
 <h2>Roteiros</h2>
@@ -123,6 +123,14 @@ Cadastur: 25.667890.12-3<br>
 </div>
 </div>
 </section>
+
+<section id="english-info" class="section container-branco">
+<h2>Discover Santos: English Information</h2>
+<p>Welcome, international traveler! Please find our English-language flyer below with detailed information about our sustainable and historical receptive tourism services in the Santos area. **Book now!**</p>
+<div style="text-align: center;">
+    <img src="folheto_ingles.jpg" alt="Santos Tourism English Flyer" style="max-width: 100%; height: auto; margin-top: 20px;"> 
+</div>
+</section>
 </main>
 <footer class="container-branco">
 <section id="contact">
@@ -148,6 +156,9 @@ event.preventDefault();
 showSection(this.getAttribute('href').substring(1));
 });
 });
+
+// Exibe a seção 'Roteiros' por padrão ao carregar a página
+showSection('roteiros'); 
 
 // Função para comprar passeio
 function comprarPasseio(nomePasseio) {
