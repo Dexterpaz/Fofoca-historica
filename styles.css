@@ -141,3 +141,22 @@ border-radius: 10px;
 margin: 10px 0;
 font-size: 18px; /* Tamanho da fonte aumentado */
 }
+/* Botão do Currículo */
+.botao-curriculo {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50; /* Verde do tema */
+    color: white !important; /* Força a cor branca */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #3e8e41;
+    transition: background-color 0.3s;
+    text-shadow: none; /* Remove sombra para ficar mais limpo */
+}
+
+.botao-curriculo:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+    transform: scale(1.05);
+}
