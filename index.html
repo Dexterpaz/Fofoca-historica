@@ -10,6 +10,21 @@
 <style>
   /* Substitui os estilos inline das imagens do Instagram */
   .icone-social { width: 25px; height: 25px; vertical-align: middle; }
+
+  /* Correção do bug de layout e sobreposição */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  main {
+    flex: 1; /* Garante que o main ocupe o espaço disponível */
+    padding-bottom: 80px; /* Dá espaço para o rodapé e o elemento flutuante no fundo */
+  }
+  footer {
+    clear: both; /* Garante que o rodapé não sobreponha nada que flutue */
+  }
 </style>
 </head>
 <body>
@@ -98,7 +113,7 @@
 
 <section id="quem-somos" class="section container-branco">
 <h2>Quem Somos</h2>
-<p>Somos uma equipe de guias turísticos apaixonados por Santos e dedicados a proporcionar a melhor experiência para nossos visitantes. Com anos de experiência e profundo conhecimento da região, estamos prontos para mostrar o melhor que Santos tem a oferecer.</p>
+<p>Somos uma equipe de guias turísticos apaixonados por Santos e dedicados a proporcionar a melhor experiência para nossos visitantes. Com years de experiência e profundo conhecimento da região, estamos prontos para mostrar o melhor que Santos tem a oferecer.</p>
 </section>
 
 <section id="fale-conosco" class="section container-branco">
@@ -111,9 +126,8 @@
 </div>
 <div class="contato-form">
 <h3>Envie uma Mensagem</h3>
-<!-- Formulário configurado com FormSubmit -->
+<!-- Formulário configurado com FormSubmit e captcha off -->
 <form action="https://formsubmit.co/guiadexter.sts@gmail.com" method="POST">
-<!-- Input oculto para evitar redirecionamento com captcha em alguns casos -->
 <input type="hidden" name="_captcha" value="false">
 <label for="nome">Nome:</label>
 <input type="text" id="nome" name="nome" required>
@@ -136,8 +150,8 @@
 </section>
 </main>
 
-<!-- Rodapé limpo, apenas com direitos autorais para evitar redundância -->
-<footer class="container-branco" style="text-align: center; padding: 20px 0;">
+<!-- Rodapé limpo, posicionado corretamente no final -->
+<footer class="container-branco" style="text-align: center; padding: 30px 0;">
     <p>&copy; 2026 Guia Receptivo em Santos. Todos os direitos reservados.</p>
 </footer>
 
@@ -168,113 +182,6 @@ alert('Você selecionou o ' + nomePasseio + '. Redirecionando para a página de 
 // Exemplo de redirecionamento para o WhatsApp ao clicar em comprar
 var texto = encodeURIComponent('Olá! Tenho interesse no ' + nomePasseio);
 window.open('https://wa.me/5513996131975?text=' + texto, '_blank');
-}
-</script>
-</body>
-</html></div>
-<div class="guia">
-<img src="guia2.jpg" alt="Monica">
-<h3>Monica</h3>
-<p>Guia de turismo regional SP<br>
-Guia de excursão<br>
-Excursão Nacional -Brasil<br>
-América do Sul , Guia Regional SP<br>
-Atendimento de excelência - Accor Hotels<br>
-Cadastur: 25.554643.85-6<br>
-<img src="insta.jpg" style="width: 25px; height: 25px;">
-<a href="https://www.instagram.com/moni_catss">@moni_catss</a></p>
-</div>
-<div class="guia">
-<img src="guia3.jpg" alt="Juliana">
-<h3>Juliana</h3>
-<p>Guia de turismo regional SP<br>
-Guia de excursão.<br>
-xxx<br>
-xxx<br>
-Cadastur:
-Cadastur: 25.554643.85-6<br>
-<img src="insta.jpg" style="width: 25px; height: 25px;">
-<a href="https://www.instagram.com/moni_catss">@moni_catss</a></p>
-</div>
-<div class="guia">
-<img src="guia3.jpg" alt="Juliana">
-<h3>Juliana</h3>
-<p>Guia de turismo regional SP<br>
-Guia de excursão.<br>
-Especialização em Turismo Histórico<br>
-Cadastur: 25.667890.12-3<br>
-<img src="insta.jpg" style="width: 25px; height: 25px;">
-<a href="https://www.instagram.com/juliana_turismo">@juliana_turismo</a></p>
-</div>
-</div>
-</section>
-<section id="quem-somos" class="section container-branco">
-<h2>Quem Somos</h2>
-<p>Somos uma equipe de guias turísticos apaixonados por Santos e dedicados a proporcionar a melhor experiência para nossos visitantes. Com anos de experiência e profundo conhecimento da região, estamos prontos para mostrar o melhor que Santos tem a oferecer.</p>
-</section>
-<section id="fale-conosco" class="section container-branco">
-<h2>Fale Conosco</h2>
-<div class="contato-container">
-<div class="contato-info">
-<h3>Informações de Contato</h3>
-<p>Email: <a href="mailto:guiadexter.sts@gmail.com">guiadexter.sts@gmail.com</a></p>
-<p>Telefone: (13) 99613-1975</p>
-</div>
-<div class="contato-form">
-<h3>Envie uma Mensagem</h3>
-<form>
-<label for="nome">Nome:</label>
-<input type="text" id="nome" name="nome" required>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required>
-<label for="mensagem">Mensagem:</label>
-<textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-<button type="submit">Enviar</button>
-</form>
-</div>
-</div>
-</section>
-
-<section id="english-info" class="section container-branco">
-<h2>Discover Santos: English Information</h2>
-<p>Welcome, international traveler! Please find our English-language flyer below with detailed information about our sustainable and historical receptive tourism services in the Santos area. **Book now!**</p>
-<div style="text-align: center;">
-    <img src="folheto_ingles.jpg" alt="Santos Tourism English Flyer" style="max-width: 100%; height: auto; margin-top: 20px;"> 
-</div>
-</section>
-</main>
-<footer class="container-branco">
-<section id="contact">
-<h2>Contato</h2>
-<p>Email: <a href="mailto:guiadexter.sts@gmail.com">guiadexter.sts@gmail.com</a></p>
-<p>Telefone: (13) 99613-1975</p>
-</section>
-</footer>
-<script>
-// Função para mostrar a seção correspondente ao menu clicado
-function showSection(sectionId) {
-var sections = document.getElementsByClassName('section');
-for (var i = 0; i < sections.length; i++) {
-sections[i].classList.remove('active');
-}
-document.getElementById(sectionId).classList.add('active');
-}
-
-// Adiciona event listeners aos links do menu
-document.querySelectorAll('#menu a').forEach(link => {
-link.addEventListener('click', function(event) {
-event.preventDefault();
-showSection(this.getAttribute('href').substring(1));
-});
-});
-
-// Exibe a seção 'Roteiros' por padrão ao carregar a página
-showSection('roteiros'); 
-
-// Função para comprar passeio
-function comprarPasseio(nomePasseio) {
-alert('Você selecionou o ' + nomePasseio + '. Redirecionando para a página de pagamento...');
-// Aqui você pode adicionar a lógica para redirecionar para a página de pagamento
 }
 </script>
 </body>
