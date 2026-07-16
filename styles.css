@@ -8,7 +8,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
 border-radius: 8px; /* Bordas arredondadas */
 }
 #menu a {
-color: white;
+color: Black;
 text-decoration: none;
 padding: 10px 20px;
 font-weight: bold;
@@ -18,12 +18,40 @@ transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
 background-color: #45a049; /* Cor de fundo ao passar o mouse */
 transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
 }
+
+/* Lógica de navegação das seções */
 .section {
 display: none;
 }
 .active {
 display: block;
 }
+
+/* Estilo para o fundo e correção da sobreposição do rodapé */
+body {
+background-image: url('fundo.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color: #003366; /* Texto verde igual ao menu */
+font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
+font-size: 18px; /* Tamanho da fonte aumentado */
+
+/* Adições para empurrar o rodapé para baixo corretamente */
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+margin: 0;
+}
+main {
+flex: 1; /* Garante que o conteúdo ocupe o espaço vazio */
+padding-bottom: 20px; 
+}
+footer {
+clear: both; 
+}
+
+/* Container de guias */
 .guia-container {
 display: flex;
 flex-wrap: wrap;
@@ -34,12 +62,23 @@ flex: 1 1 200px;
 margin: 10px;
 text-align: center;
 }
-.guia img {
+
+/* CORREÇÃO AQUI: O sinal de ">" garante que afeta só a foto do rosto */
+.guia > img {
 width: 150px; /* Largura fixa */
 height: 150px; /* Altura fixa */
 border-radius: 50%;
 object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
 }
+
+/* CORREÇÃO AQUI: Força o ícone a ficar pequeno e sem borda redonda */
+.icone-social { 
+width: 25px !important; 
+height: 25px !important; 
+border-radius: 0 !important;
+vertical-align: middle; 
+}
+
 header {
 display: flex;
 align-items: center;
@@ -48,6 +87,8 @@ justify-content: center;
 header img {
 margin-right: 20px;
 }
+
+/* Container de passeios */
 .passeio-container {
 display: flex;
 flex-wrap: wrap;
@@ -78,6 +119,8 @@ cursor: pointer;
 .passeio button:hover {
 background-color: #575757;
 }
+
+/* Formulário e Contato */
 .contato-container {
 display: flex;
 flex-wrap: wrap;
@@ -117,17 +160,6 @@ cursor: pointer;
 background-color: #575757;
 }
 
-/* Estilo para o fundo */
-body {
-background-image: url('fundo.jpg');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-color: #4CAF50; /* Texto verde igual ao menu */
-font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
-font-size: 18px; /* Tamanho da fonte aumentado */
-}
-
 /* Contorno nas letras */
 h1, h2, h3, p, a {
 text-shadow: 2px 2px 4px #fff; /* Contorno branco nas letras */
@@ -141,6 +173,7 @@ border-radius: 10px;
 margin: 10px 0;
 font-size: 18px; /* Tamanho da fonte aumentado */
 }
+
 /* Botão do Currículo */
 .botao-curriculo {
     display: inline-block;
