@@ -22,7 +22,6 @@
 <a href="#guias">Guias</a>
 <a href="#quem-somos">Quem Somos</a>
 <a href="#fale-conosco">Fale Conosco</a>
-<a href="#english-info">English Info</a> 
 </nav>
 
 <main>
@@ -30,21 +29,21 @@
 <h2>Roteiros</h2>
 <div class="passeio-container">
 <div class="passeio">
-<h3>Roteiro Histórico</h3>
-<p>Explore os principais pontos históricos de Santos, incluindo o Museu do Café e a Bolsa Oficial de Café.</p>
-<p><strong>Preço:</strong> R$ 50,00</p>
-<button onclick="comprarPasseio('Roteiro Histórico')">Comprar</button>
+<h3>Rota do Café</h3>
+<p>Explore os principais pontos históricos de Santos, incluindo o Museu do Café e a Rua XV, com curiosidades sobre a epoca de ouro do Café</p>
+<p><strong>Preço:</strong> R$ 20,00</p>
+<button onclick="comprarPasseio('Rota do Café')">Comprar</button>
 </div>
 <div class="passeio">
-<h3>Roteiro Cultural</h3>
-<p>Descubra a rica cultura de Santos com visitas ao Teatro Coliseu, Pinacoteca Benedicto Calixto e muito mais.</p>
-<p><strong>Preço:</strong> R$ 60,00</p>
-<button onclick="comprarPasseio('Roteiro Cultural')">Comprar</button>
+<h3>Roteiro Fofoca Histórica</h3>
+<p>Um roteiro divertido, contando curiosidades e fofocas sobre as histórias de Santos que não estão nos livros.</p>
+<p><strong>Preço:</strong> R$ 20,00</p>
+<button onclick="comprarPasseio('Roteiro Fofoca Histórica')">Comprar</button>
 </div>
 <div class="passeio">
 <h3>Roteiro Natural</h3>
-<p>Aproveite a natureza com passeios pelo Orquidário Municipal, Jardim Botânico e praias de Santos.</p>
-<p><strong>Preço:</strong> R$ 70,00</p>
+<p>Aproveite a natureza com passeios por ruinas historicas, ilhas e praias de Santos.</p>
+<p><strong>Preço:</strong> Consulte valores</p>
 <button onclick="comprarPasseio('Roteiro Natural')">Comprar</button>
 </div>
 </div>
@@ -105,7 +104,6 @@
 </div>
 <div class="contato-form">
 <h3>Envie uma Mensagem</h3>
-<!-- Formulário configurado com FormSubmit e captcha off -->
 <form action="https://formsubmit.co/guiadexter.sts@gmail.com" method="POST">
 <input type="hidden" name="_captcha" value="false">
 <label for="nome">Nome:</label>
@@ -119,23 +117,13 @@
 </div>
 </div>
 </section>
-
-<section id="english-info" class="section container-branco">
-<h2>Discover Santos: English Information</h2>
-<p>Welcome, international traveler! Please find our English-language flyer below with detailed information about our sustainable and historical receptive tourism services in the Santos area. **Book now!**</p>
-<div style="text-align: center;">
-    <img src="folheto_ingles.jpg" alt="Santos Tourism English Flyer" style="max-width: 100%; height: auto; margin-top: 20px;"> 
-</div>
-</section>
 </main>
 
-<!-- Rodapé limpo, posicionado corretamente no final -->
 <footer class="container-branco" style="text-align: center; padding: 30px 0;">
     <p>&copy; 2026 Guia Receptivo em Santos. Todos os direitos reservados.</p>
 </footer>
 
 <script>
-// Função para mostrar a seção correspondente ao menu clicado
 function showSection(sectionId) {
 var sections = document.getElementsByClassName('section');
 for (var i = 0; i < sections.length; i++) {
@@ -144,7 +132,6 @@ sections[i].classList.remove('active');
 document.getElementById(sectionId).classList.add('active');
 }
 
-// Adiciona event listeners aos links do menu
 document.querySelectorAll('#menu a').forEach(link => {
 link.addEventListener('click', function(event) {
 event.preventDefault();
@@ -152,13 +139,10 @@ showSection(this.getAttribute('href').substring(1));
 });
 });
 
-// Exibe a seção 'Roteiros' por padrão ao carregar a página
 showSection('roteiros'); 
 
-// Função para comprar passeio
 function comprarPasseio(nomePasseio) {
 alert('Você selecionou o ' + nomePasseio + '. Redirecionando para a página de pagamento via WhatsApp...');
-// Exemplo de redirecionamento para o WhatsApp ao clicar em comprar
 var texto = encodeURIComponent('Olá! Tenho interesse no ' + nomePasseio);
 window.open('https://wa.me/5513996131975?text=' + texto, '_blank');
 }
